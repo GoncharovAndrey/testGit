@@ -6,7 +6,7 @@
 /*   By: cjosue <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 14:54:43 by cjosue            #+#    #+#             */
-/*   Updated: 2019/09/06 21:10:20 by cjosue           ###   ########.fr       */
+/*   Updated: 2019/09/07 20:23:47 by cjosue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,16 @@ char	*ft_strncat(char *s1, const char *s2, size_t n);
 char	*ft_strchr(char *s, int c);
 char	*ft_strrchr(char *s, int c);
 char	*ft_strstr(char *str_1, char *str_2);
+char    *ft_strnstr(char *s_1, char *s_2, size_t n);
+int		ft_strcmp(const char *s1, const char *s2);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_atoi(const char	*numstr);
+int		ft_isalpha(int c);
+int		ft_isdigit(int c);
+int		ft_isalnum(int c);
+int		ft_isascii(int c);
+int		ft_isprint(int c);
+int		ft_toupper(int c);
+int		ft_tolower(int c);
 
 #endif
