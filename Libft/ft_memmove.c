@@ -1,34 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cjosue <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/06 14:23:20 by cjosue            #+#    #+#             */
-/*   Updated: 2019/09/08 19:39:56 by cjosue           ###   ########.fr       */
+/*   Created: 2019/09/08 17:18:52 by cjosue            #+#    #+#             */
+/*   Updated: 2019/09/08 17:36:19 by cjosue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, char *src, size_t size)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	l_1;
-	size_t	l_2;
-	size_t	res;
+	unsigned char		*c_d;
+	const unsigned char	*c_s;
+	size_t				i;
 
-	l_1 = ft_strlen(dst);
-	l_2 = ft_strlen(src);
-	res = l_1 + l_2;
-	if (l_1 > size)
-		return (l_2 + size);
-	l_2 = 0;
-	while (src[l_2] && l_2 < size - l_1 - 1)
+	c_d = dst;
+	c_s = src;
+	i = 0;
+	if (c_d > c_s && (size_t)(c_d - c_s) < len)
+		while (len--)
+			c_d[len] = c_s[len];
+	else
 	{
-		dst[l_1 + l_2] = src[l_2];
-		l_2++;
+		i = 0;
+		while (i < len)
+		{
+			c_d[i] = c_s[i];
+			i++;
+		}
 	}
-	dst[l_1 + l_2] = '\0';
-	return (res);
+	return (dst);
 }

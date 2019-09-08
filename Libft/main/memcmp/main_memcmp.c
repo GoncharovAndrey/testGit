@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   main_memset.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cjosue <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/06 14:23:20 by cjosue            #+#    #+#             */
-/*   Updated: 2019/09/08 19:39:56 by cjosue           ###   ########.fr       */
+/*   Created: 2019/09/05 13:44:23 by cjosue            #+#    #+#             */
+/*   Updated: 2019/09/08 18:39:35 by cjosue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, char *src, size_t size)
+int		main(int argc, char **argv)
 {
-	size_t	l_1;
-	size_t	l_2;
-	size_t	res;
-
-	l_1 = ft_strlen(dst);
-	l_2 = ft_strlen(src);
-	res = l_1 + l_2;
-	if (l_1 > size)
-		return (l_2 + size);
-	l_2 = 0;
-	while (src[l_2] && l_2 < size - l_1 - 1)
-	{
-		dst[l_1 + l_2] = src[l_2];
-		l_2++;
-	}
-	dst[l_1 + l_2] = '\0';
-	return (res);
+	argc = memcmp(argv[1], argv[2], 7);
+	printf("%d\n", argc);
+//	printf("%d\n", argc);
+//	argv[0] = NULL;
+	argc = ft_memcmp(argv[1], argv[2], 7);
+	printf("%d\n", argc);
+//	printf("%s\n", argv[3]);
+	return 0;
 }
+

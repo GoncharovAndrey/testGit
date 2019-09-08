@@ -6,7 +6,7 @@
 /*   By: cjosue <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 14:54:43 by cjosue            #+#    #+#             */
-/*   Updated: 2019/09/08 14:46:20 by cjosue           ###   ########.fr       */
+/*   Updated: 2019/09/08 19:25:59 by cjosue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strcpy(char	*dst, const char *src);
 char	*ft_strncpy(char *s1, const char *s2, size_t n);
 char	*ft_strcat(char *dest, const char *src);
 char	*ft_strncat(char *s1, const char *s2, size_t n);
-//size_t	ft_strlcat(char *s1, char *s2, size_t n);
+size_t	ft_strlcat(char *s1, char *s2, size_t n);
 char	*ft_strchr(char *s, int c);
 char	*ft_strrchr(char *s, int c);
 char	*ft_strstr(char *str_1, char *str_2);
@@ -39,5 +39,8 @@ int		ft_tolower(int c);
 void	*ft_memset(void *dst, int c, size_t len);
 void	*ft_memcpy(void *dst, const void *src, size_t len);
 void	*ft_memccpy(void *sdt, const void *src, int c, size_t n);
+void	*ft_memmove(void *dst, const void *src, size_t len);
+void	*ft_memchr(void const *s, int c, size_t n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
 #endif
