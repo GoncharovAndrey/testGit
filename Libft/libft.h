@@ -6,7 +6,7 @@
 /*   By: cjosue <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 14:54:43 by cjosue            #+#    #+#             */
-/*   Updated: 2019/09/07 20:23:47 by cjosue           ###   ########.fr       */
+/*   Updated: 2019/09/08 14:46:20 by cjosue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,8 @@ int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
+void	*ft_memset(void *dst, int c, size_t len);
+void	*ft_memcpy(void *dst, const void *src, size_t len);
+void	*ft_memccpy(void *sdt, const void *src, int c, size_t n);
 
 #endif
