@@ -1,29 +1,20 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
+#    MakeFile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: cjosue <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2019/09/05 18:15:54 by cjosue            #+#    #+#              #
-#    Updated: 2019/09/09 18:12:21 by cjosue           ###   ########.fr        #
+#    Created: 2019/09/05 12:53:50 by cjosue            #+#    #+#              #
+#    Updated: 2019/09/09 18:11:15 by cjosue           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-FILE_FOR_LIB = *.c
-FILE_O = *.o
+NAME_PROGRAM  = ft_memdel
+NAME_C = ft_memdel.c
 
 all:
-		    gcc -Wall -Wextra -Werror -c -I$ -c $(FILE_FOR_LIB)
-			ar rc libft.a $(FILE_O)
-			ranlib libft.a
-			rm -f $(FILE_O)
-
-clean:
-		    rm -f $(FILE_O)
-
-fclean: clean
-		    rm -f libft.a
-
-re: fclean all
-
+		@gcc -Wall -Wextra -Werror main_$(NAME_PROGRAM).c \
+		-L/Users/cjosue/Desktop/Libf_My_Git/Libft/  -lft \
+		-I /Users/cjosue/Desktop/Libf_My_git/Libft \
+		-o $(NAME_PROGRAM)
