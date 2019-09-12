@@ -28,7 +28,7 @@ int	ft_atoi(const char *numstr)
 		i++;
 		z = -1;
 	}
-	if (numstr[i] == '+')
+	else if (numstr[i] == '+')
 		i++;
 	while (numstr[i] >= '0' && numstr[i] <= '9')
 	{
