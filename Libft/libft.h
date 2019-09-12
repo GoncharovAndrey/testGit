@@ -6,7 +6,7 @@
 /*   By: cjosue <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 14:54:43 by cjosue            #+#    #+#             */
-/*   Updated: 2019/09/09 18:04:33 by cjosue           ###   ########.fr       */
+/*   Updated: 2019/09/11 13:31:36 by cjosue           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,11 @@ void	ft_striter(char *s, void (*f)(char *));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 void	ft_strmap(char const *s, char (*f)(char));
 void	ft_strmapi(char const *s,char (*f)(unsigned int,char));
+int		ft_strequ(char const *s1, char const *s2);
+int		ft_strnequ(char const *s1, char const *s2,size_t n);
+char	*ft_strsub(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s);
+char	**ft_strsplit(char const *s, char c);
 
 #endif
