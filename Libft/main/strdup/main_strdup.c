@@ -13,15 +13,15 @@
 #include <stdio.h>
 #include <libft.h>
 
-int		main(int argc, char **argv)
+int		main(void)
 {
 	char	*proverka;
 	char	*proverka_2;
 
-	argc = 0;
-	proverka = ft_strdup(argv[1]);
-	proverka_2 = strdup(argv[1]);
-	printf("ft___ %s\n", proverka);
+	proverka = NULL;
+//	proverka = ft_strdup(argv[1]);
+	proverka_2 = ft_strdup(proverka);
+//	printf("ft___ %s\n", proverka);
 	printf("libc_ %s\n", proverka_2);
 	return (0);
 }

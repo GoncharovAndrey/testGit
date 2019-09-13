@@ -39,7 +39,8 @@ char		*ft_itoa(int n)
 		i++;
 		n /= 10;
 	}
-	res = ft_strnew(i);
+	if(!(res = ft_strnew(i)))
+		return (NULL);
 	while (--i >= (0 + f))
 	{
 		res[i] = num % 10 + '0';

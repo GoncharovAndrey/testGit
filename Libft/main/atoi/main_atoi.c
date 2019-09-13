@@ -13,17 +13,21 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <limits.h>
 #include "libft.h"
 
-int		main(int argc, char **argv)
+int		main()
 {
 	int		s;
 	int		s2;
+	char	num[15];
 
-	argc = 0;
-	s = atoi(argv[1]);
+	sprintf(num, "%i", INT_MIN);
+	s = atoi(num);
 	printf("%d\n", s);
-	s2 = ft_atoi(argv[1]);
+	s2 = ft_atoi(num);
 	printf("%d\n", s2);
+	if (s == s2)
+		printf("OK");
 	return (0);
 }

@@ -17,12 +17,12 @@
 int		main(int argc, char **argv)
 {
 	char    *s;
-	char	*s2;
+//	char	*s2;
 
 	argc = 0;
-	s = strchr(argv[1], argv[2][0]);
+	s = strchr(argv[1], '\0');
 	printf("%s\n", s);
-	s2 = ft_strchr(argv[1], argv[2][0]);
-	printf("%s\n", s2);
+//	s2 = ft_strchr(argv[1], '\0');
+//	printf("%s\n", s2);
 	return (0);
 }

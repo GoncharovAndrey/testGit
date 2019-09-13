@@ -16,11 +16,8 @@ void	*ft_memalloc(size_t size)
 {
 	void	*array;
 
-	if ((array = (void *)malloc(size)) == 0)
+	if (!(array = (void *)malloc(size)))
 		return (NULL);
-	else
-	{
-		ft_bzero(array, size);
-		return (array);
-	}
+	ft_bzero(array, size);
+	return (array);
 }
