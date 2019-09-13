@@ -39,7 +39,7 @@ char		*ft_itoa(int n)
 		i++;
 		n /= 10;
 	}
-	if(!(res = ft_strnew(i)))
+	if (!(res = ft_strnew(i)))
 		return (NULL);
 	while (--i >= (0 + f))
 	{

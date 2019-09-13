@@ -19,8 +19,8 @@ int     main(int argc, char **argv)
     char    **arr;
 
     argc = 0;
-    arr = ft_strsplit(argv[1], '*');
-	while (arr)
+    arr = ft_strsplit(argv[1], ' ');
+	while (*arr)
 		printf("%s\n", *arr++);
 //	printf("%s\n", arr[0]);
 //	printf("%s\n", arr[1]);

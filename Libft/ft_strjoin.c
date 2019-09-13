@@ -20,6 +20,18 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	i = 0;
 	if (!s1 && !s2)
 		return (NULL);
+	if (!s1)
+	{
+		if (!(str = (char*)malloc(ft_strlen(s2) + 1)))
+			return (NULL);
+		return (ft_strcpy(str, s2));
+	}
+	else if (!s2)
+	{
+		if (!(str = (char*)malloc(ft_strlen(s1) + 1)))
+			return (NULL);
+		return (ft_strcpy(str, s1));
+	}
 	i = ft_strlen(s1) + ft_strlen(s2);
 	if (!(str = (char*)malloc(i + 1)))
 		return (NULL);

@@ -23,7 +23,5 @@ char	*ft_strchr(const char *s, int c_in)
 			return (NULL);
 		str++;
 	}
-//	if (str[index - 1] != (unsigned char)c_in)
-//		return (NULL);
 	return (str);
 }

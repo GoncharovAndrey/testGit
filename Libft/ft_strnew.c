@@ -18,7 +18,7 @@ char	*ft_strnew(size_t size)
 
 	if (++size == 0)
 		return (NULL);
-	if(!(arr = (char*)malloc(size)))
+	if (!(arr = (char*)malloc(size)))
 		return (0);
 	ft_bzero(arr, size);
 	return (arr);
