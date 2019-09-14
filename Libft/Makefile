@@ -6,7 +6,7 @@
 #    By: cjosue <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/05 18:15:54 by cjosue            #+#    #+#              #
-#    Updated: 2019/09/13 20:36:19 by cjosue           ###   ########.fr        #
+#    Updated: 2019/09/14 18:37:31 by cjosue           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,9 @@ FILE_FOR_LIB=   ft_isprint.c     ft_memmove.c     ft_putstr.c    \
                 ft_putnbr.c      ft_strcpy.c      ft_strlen.c    \
                 ft_strnstr.c     ft_isdigit.c     ft_memdel.c    \
                 ft_putnbr_fd.c   ft_strdel.c      ft_strmap.c    \
-                ft_strrchr.c
+                ft_strrchr.c     ft_lstnew.c      ft_lstdelone.c \
+				ft_lstdel.c      ft_lstadd.c      ft_lstiter.c   \
+				ft_lstmap.c
 
 FILE_O =        ft_isprint.o     ft_memmove.o     ft_putstr.o    \
                 ft_strdup.o      ft_strmapi.o     ft_strsplit.o  \
@@ -49,7 +51,9 @@ FILE_O =        ft_isprint.o     ft_memmove.o     ft_putstr.o    \
                 ft_putnbr.o      ft_strcpy.o      ft_strlen.o    \
                 ft_strnstr.o     ft_isdigit.o     ft_memdel.o    \
                 ft_putnbr_fd.o   ft_strdel.o      ft_strmap.o    \
-                ft_strrchr.o
+                ft_strrchr.o     ft_lstnew.o      ft_lstdelone.o \
+				ft_lstdel.o      ft_lstadd.o      ft_lstiter.o   \
+				ft_lstmap.o
 
 $(NAME):	./libft.h
 			gcc $(FLAG) -c $(FILE_FOR_LIB) $(HDR)
