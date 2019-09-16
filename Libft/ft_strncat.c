@@ -12,23 +12,23 @@
 
 #include "libft.h"
 
-char	*ft_strncat(char *s1, const char *s2, size_t n)
+char	*ft_strncat(char *dest, const char *src, size_t n)
 {
 	size_t	index;
 	size_t	index_2;
 
 	index = 0;
-	while (s2[index] && index != n)
+	while (src[index] && index != n)
 		index++;
-	index_2 = ft_strlen(s1);
+	index_2 = ft_strlen(dest);
 	n = index + index_2;
 	index = 0;
 	while (index_2 != n)
 	{
-		s1[index_2] = s2[index];
+		dest[index_2] = src[index];
 		index_2++;
 		index++;
 	}
-	s1[index_2] = '\0';
-	return (s1);
+	dest[index_2] = '\0';
+	return (dest);
 }

@@ -12,19 +12,19 @@
 
 #include "libft.h"
 
-char	*ft_strncpy(char *s1, const char *s2, size_t n)
+char	*ft_strncpy(char *dest, const char *src, size_t n)
 {
 	size_t	lenght;
 
-	lenght = ft_strlen(s2);
+	lenght = ft_strlen(src);
 	if (lenght < n)
 	{
 		while (lenght != n)
-			s1[lenght++] = '\0';
+			dest[lenght++] = '\0';
 		lenght = 0;
-		while (s2[lenght])
+		while (src[lenght])
 		{
-			s1[lenght] = s2[lenght];
+			dest[lenght] = src[lenght];
 			lenght++;
 		}
 	}
@@ -33,9 +33,9 @@ char	*ft_strncpy(char *s1, const char *s2, size_t n)
 		lenght = 0;
 		while (lenght != n)
 		{
-			s1[lenght] = s2[lenght];
+			dest[lenght] = src[lenght];
 			lenght++;
 		}
 	}
-	return (s1);
+	return (dest);
 }
