@@ -21,7 +21,7 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 	i = 0;
 	l = ft_strlen(s2);
 	if (s2[0] == '\0')
-		return (s1);
+		return ((char*)s1);
 	while (s1[i] && i != len)
 	{
 		k = 0;
@@ -31,7 +31,7 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 					&& s2[k] && (i + k) != len)
 				k++;
 			if (k == l)
-				return (s1 + i);
+				return ((char*)s1 + i);
 		}
 		i++;
 	}
