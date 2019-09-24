@@ -20,15 +20,21 @@ int		main(int argc, char **argv)
 	char	**line;
 
 	argc = 0;
-	fd = open(argv[1],O_RDONLY);
+	res = 0;
+//	argv[1] = NULL;
+	fd = open(argv[1],O_WRONLY);
 	line = (char**)malloc(sizeof(char*) * 10);
+//	printf("%d  ___ fd\n", fd);
+	//	free(line);
+//	line = NULL;
+//	line[1] = NULL;
 	res = get_next_line(fd, &line[1]);
-	printf("%s____line 1\n", line[1]);
+//	printf("%s____line 1\n", line[1]);
 	printf("% d____ res 1\n", res);
-	res =  get_next_line(fd, &line[2]);
+	res =  get_next_line(-1, &line[2]);
 	printf("%s ____line2\n", line[2]);
 	printf("%d ____ res2\n", res);
-	res =  get_next_line(fd, &line[3]);
+	res =  get_next_line(5000, &line[3]);
 	printf("%s ____line3\n", line[3]);
 	printf("%d ____ res3\n", res);
 	res =  get_next_line(fd, &line[4]);
@@ -37,5 +43,6 @@ int		main(int argc, char **argv)
 	res =  get_next_line(fd, &line[5]);
 	printf("%s ____line5\n", line[5]);
 	printf("%d ____ res5\n", res);
+//	free(line[1]);
 	return (0);
 }

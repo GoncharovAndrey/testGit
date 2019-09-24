@@ -10,22 +10,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dfe684ce-ee31-4066-bb72-9e8b819cc96e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/get_next_line" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/get_next_line" beforeDir="false" afterPath="$PROJECT_DIR$/get_next_line" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/get_next_line.c" beforeDir="false" afterPath="$PROJECT_DIR$/get_next_line.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/get_next_line.h" beforeDir="false" afterPath="$PROJECT_DIR$/get_next_line.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libft" beforeDir="false" afterPath="$PROJECT_DIR$/libft" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libft/author" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/libft/libft.h" beforeDir="false" afterPath="$PROJECT_DIR$/libft/libft.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_get_next_line.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_get_next_line.c" beforeDir="false" afterPath="$PROJECT_DIR$/main_get_next_line.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/one_big_fat_line.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_main/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_main/test1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_main/test2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_main/test_deskriptor.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_main/test_sysconf.c" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +31,7 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/libft" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1QxkdjgjLKIJhP95hWCuvkjfCGE" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -52,6 +46,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -93,6 +88,10 @@
       <workItem from="1568891535459" duration="626000" />
       <workItem from="1568895891379" duration="3447000" />
       <workItem from="1568973867687" duration="8270000" />
+      <workItem from="1569064781128" duration="2733000" />
+      <workItem from="1569236114061" duration="11035000" />
+      <workItem from="1569250858246" duration="1223000" />
+      <workItem from="1569315042052" duration="10171000" />
     </task>
     <servers />
   </component>
