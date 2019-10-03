@@ -11,15 +11,9 @@
   <component name="ChangeListManager">
     <list default="true" id="dfe684ce-ee31-4066-bb72-9e8b819cc96e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/get_next_line" beforeDir="false" afterPath="$PROJECT_DIR$/get_next_line" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/get_next_line.c" beforeDir="false" afterPath="$PROJECT_DIR$/get_next_line.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/get_next_line.h" beforeDir="false" afterPath="$PROJECT_DIR$/get_next_line.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libft" beforeDir="false" afterPath="$PROJECT_DIR$/libft" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libft/author" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/libft/libft.h" beforeDir="false" afterPath="$PROJECT_DIR$/libft/libft.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_get_next_line.c" beforeDir="false" afterPath="$PROJECT_DIR$/main_get_next_line.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/one_big_fat_line.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test1" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -91,7 +85,9 @@
       <workItem from="1569064781128" duration="2733000" />
       <workItem from="1569236114061" duration="11035000" />
       <workItem from="1569250858246" duration="1223000" />
-      <workItem from="1569315042052" duration="10171000" />
+      <workItem from="1569315042052" duration="10228000" />
+      <workItem from="1569427830347" duration="619000" />
+      <workItem from="1569504030548" duration="490000" />
     </task>
     <servers />
   </component>
