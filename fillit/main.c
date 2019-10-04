@@ -15,8 +15,9 @@
 
 int		main(int ac, char **av)
 {
-	figure		tetramino[26];
-	int			ret;
+	figure			tetramino[27];
+	int				ret;
+	unsigned short	map[16];
 
 	ret = ft_read_file(open(av[1], O_RDONLY), tetramino);
 	printf("%d ssss\n", ret);
