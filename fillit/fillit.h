@@ -27,5 +27,6 @@ typedef struct			s_figure
 }						figure;
 
 int						ft_read_file(int fd, figure *list);
+int						ft_filling(unsigned short *map, figure *list, int num);
 
 #endif

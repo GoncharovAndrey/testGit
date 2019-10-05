@@ -35,7 +35,6 @@ int					ft_shape_check(char *str)
 		}
 		i++;
 	}
-	printf("%d side\n", side);
 	return (side == 6 || side == 8);
 }
 
@@ -80,10 +79,8 @@ void				ft_figure_position(char *str, figure *list)
 		list->position = list->position >> 16;
 	while ((list->position & (x << list->width)) && list->width < 4)
 		list->width++ ;
-	printf("%d width\n", list->width);
 	while ((list->position & (y << (list->height * 16))) && list->height < 4)
 		list->height++ ;
-	printf("%d height\n", list->height);
 }
 
 int					ft_read_file(int fd, figure *list)
@@ -101,7 +98,7 @@ int					ft_read_file(int fd, figure *list)
 	{
 		if(!(ft_character_check(buf, ret)))
 			return (-1);
-		list->id = alph;
+		list[number].id = alph;
 		ft_figure_position(buf, &list[number]);
 		alph++;
 		number++;
