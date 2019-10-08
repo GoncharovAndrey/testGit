@@ -70,6 +70,7 @@ void				ft_figure_position(char *str, figure *list)
 	i = -1;
 	list->width = 0;
 	list->height = 0;
+	list->position = 0;
 	while (++i < 20)
 		if (str[i] == '#')
 			list->position |= 1L << (16 * (i / 5) + (i % 5));

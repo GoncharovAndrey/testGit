@@ -33,15 +33,35 @@ int		main(int ac, char **av)
 	unsigned short	map[16];
 	int				size;
 
+	size = 0;
+	while (size != 27)
+	{
+		tetramino[size].x = 0;
+		tetramino[size].y = 0;
+		tetramino[size].position = 0;
+		size++;
+	}
 	ret = ft_read_file(open(av[1], O_RDONLY), tetramino);
 	printf("%d kol-vo tetramino\n", ret);
 	printf("%c  id\n", tetramino[0].id);
-	size = ft_filling(map, &tetramino[0], ret);
-	ft_memset(map, 0, sizeof(unsigned short) * 16);
+	size = 0;
+	while(size != 16)
+		map[size++] = 0;
+	//	ft_memset(map, 0, sizeof(unsigned short) * 16);
+	size = 0;
+	while (size != 5)
+	{
+		printf("%d ___ width, %d ____ height, %c ____ id\n", tetramino[size].width, tetramino[size].height, tetramino[size].id);
+		size++;
+	}
+
+	size = ft_filling(map, &tetramino[0], ret);	
 	printf("%d fillit\n", size);
-	printf("%d - x %d - y ___ tetramino 1\n", tetramino[0].x,tetramino[0].y);
-	printf("%d - x %d - y ___ tetramino 2\n", tetramino[1].x,tetramino[1].y);
-	printf("%d - x %d - y ___ tetramino 3\n", tetramino[2].x,tetramino[2].y);
-	printf("%d - x %d - y ___ tetramino 4\n", tetramino[3].x,tetramino[3].y);
+	size = 0;
+	while (tetramino[size].position)
+	{
+		printf("%d - x %d - y ___ tetramino %c\n", tetramino[size].x, tetramino[size].y, tetramino[size].id);
+		size++;
+	}
 	return (0);
 }
