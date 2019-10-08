@@ -10,19 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <fillit.h>
+#include "../includes/fillit.h"
 #include <stdio.h>
 
-int					ft_shape_check(char *str)
+int						ft_shape_check(char *str)
 {
-	short int		i;
-	int		side;
+	short int			i;
+	int					side;
 
 	i = 0;
 	side = 0;
 	while (i < 20)
 	{
-		if (str[i] ==  '#')
+		if (str[i] == '#')
 		{
 			if ((i + 1) < 20 && str[i + 1] == '#')
 				side++;
@@ -38,19 +38,21 @@ int					ft_shape_check(char *str)
 	return (side == 6 || side == 8);
 }
 
-int					ft_character_check(char *str, const int ret)
+int						ft_character_check(char *str, const int ret)
 {
-	short int		i;
+	short int			i;
 
 	i = -1;
-	while(++i < 20)
+	if (ret < 20)
+		return (0);
+	while (++i < 20)
 	{
 		if (i % 5 < 4 && (str[i] == '.' || str[i] == '#'))
 			continue ;
 		else if (i % 5 == 4 && str[i] == '\n')
 			continue ;
 		else
-			return (-1);
+			return (0);
 	}
 	if (ret == 21 && str[20] != '\n')
 		return (0);
@@ -59,18 +61,16 @@ int					ft_character_check(char *str, const int ret)
 	return (1);
 }
 
-void				ft_figure_position(char *str, figure *list)
+void					ft_figure_position(char *str, t_figure *list, int num)
 {
-	short int		i;
+	short int			i;
 	unsigned long int	x;
 	unsigned long int	y;
 
 	x = 281479271743489;
 	y = 65535;
 	i = -1;
-	list->width = 0;
-	list->height = 0;
-	list->position = 0;
+	list->id = num + 'A';
 	while (++i < 20)
 		if (str[i] == '#')
 			list->position |= 1L << (16 * (i / 5) + (i % 5));
@@ -79,32 +79,35 @@ void				ft_figure_position(char *str, figure *list)
 	while (!(list->position & y))
 		list->position = list->position >> 16;
 	while ((list->position & (x << list->width)) && list->width < 4)
-		list->width++ ;
+		list->width++;
 	while ((list->position & (y << (list->height * 16))) && list->height < 4)
-		list->height++ ;
+		list->height++;
 }
 
-int					ft_read_file(int fd, figure *list)
+int						ft_read_file(int fd, t_figure *list)
 {
-	int				ret;
-	char			buf[21];
-	int				number;
-	char			alph;
+	int					ret;
+	char				buf[21];
+	int					number;
+	int					j;
 
+	j = 0;
 	number = 0;
-	alph = 'A';
 	if (fd == -1)
-		return (-1);
+		return (0);
 	while ((ret = read(fd, buf, 21)) && number < 26)
 	{
-		if(!(ft_character_check(buf, ret)))
-			return (-1);
-		list[number].id = alph;
-		ft_figure_position(buf, &list[number]);
-		alph++;
+		if (!(ft_character_check(buf, ret)))
+		{
+			close(fd);
+			return (0);
+		}
+		ft_figure_position(buf, &list[number], number);
 		number++;
+		j = ret;
 	}
-	if (read(fd, buf, 21))
-		return (-1);
+	close(fd);
+	if (j == 21)
+		return (0);
 	return (number);
 }

@@ -14,7 +14,7 @@
 # define FILLIT_H
 # include <fcntl.h>
 # include <unistd.h>
-#include "libft/libft.h"
+# include "libft.h"
 
 typedef struct			s_figure
 {
@@ -24,9 +24,10 @@ typedef struct			s_figure
 	unsigned short		x;
 	unsigned short		y;
 	unsigned long int	position;
-}						figure;
+}						t_figure;
 
-int						ft_read_file(int fd, figure *list);
-int						ft_filling(unsigned short *map, figure *list, int num);
+int						ft_read_file(int fd, t_figure *list);
+int						ft_filling(unsigned short *map, t_figure *list, \
+									int num);
 
 #endif
