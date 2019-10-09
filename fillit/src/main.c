@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/fillit.h"
+#include "fillit.h"
 #include <stdio.h>
 
 void				ft_new_list(t_figure *list)
@@ -79,6 +79,11 @@ int					main(int ac, char **av)
 	int				size;
 
 	ac = 0;
+	if (ac > 2)
+	{
+		ft_putendl_fd("error", 1);
+		return (0);
+	}
 	size = 0;
 	ft_new_list(tetramino);
 	if (!(ret = ft_read_file(open(av[1], O_RDONLY), tetramino)))
@@ -89,11 +94,6 @@ int					main(int ac, char **av)
 	while (size != 16)
 		map[size++] = 0;
 	size = ft_filling(map, &tetramino[0], ret);
-	if (size == 17)
-	{
-		ft_putendl_fd("erro", 1);
-		return (0);
-	}
 	ft_print_map(tetramino, size);
 	return (0);
 }

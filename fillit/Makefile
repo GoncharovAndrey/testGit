@@ -14,16 +14,32 @@
 NAME    = fillit
 
 # directories
-SRC_DIR	:= ./src
-INC_DIR	:= ./includes
-OBJ_DIR	:= ./obj
-LIB_DIR	:= ./lib
+INC_DIR	:= ./src
+LIB_DIR	:= ./libft
 
 # src / obj files
-SRC		:= main.c \
-		   read_file.c \
-		   map_filling.c \
+SRC		:=  ./src/main.c \
+			./src/read_file.c \
+			./src/map_filling.c
 
-$(NAME):    gcc -Wall -Wextra -Werror -c $(SRC_DIR)$(SRC) -I./includes/ -L./lib/lidft/ -lft -o fillit
+OBJ		:=  main.o \
+			read_file.o \
+			map_filling.o
 
 all:$(NAME)
+
+$(NAME):
+		@cd $(LIB_DIR) && $(MAKE)
+		@gcc -Wall -Wextra -Werror -c $(SRC)
+		@gcc $(OBJ) -L$(LIB_DIR) -lft -I$(INC_DIR) -o $(NAME)
+
+
+clean:
+		@cd $(LIB_DIR) && $(MAKE) clean
+		@rm -rf $(OBJ)
+
+fclean:	clean
+		@cd $(LIB_DIR) && $(MAKE) fclean
+		@rm -rf $(NAME)
+
+re:	fclean all

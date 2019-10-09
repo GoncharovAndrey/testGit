@@ -56,16 +56,16 @@ FILE_O =        ft_isprint.o     ft_memmove.o     ft_putstr.o    \
 				ft_lstmap.o
 
 $(NAME):	./libft.h
-			gcc $(FLAG) -c $(FILE_FOR_LIB) $(HDR)
-			ar rc libft.a $(FILE_O)
-			ranlib libft.a
+			@gcc $(FLAG) -c $(FILE_FOR_LIB) $(HDR)
+			@ar rc libft.a $(FILE_O)
+			@ranlib libft.a
 
 all:$(NAME)
 
 clean:
-		rm -f $(FILE_O)
+		@rm -f $(FILE_O)
 
 fclean:clean
-		rm -f $(NAME)
+		@rm -f $(NAME)
 
 re:	fclean all
