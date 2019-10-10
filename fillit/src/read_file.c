@@ -17,13 +17,16 @@ int						ft_shape_check(char *str)
 {
 	short int			i;
 	int					side;
+	int					n;
 
 	i = 0;
+	n = 0;
 	side = 0;
 	while (i < 20)
 	{
 		if (str[i] == '#')
 		{
+			n++;
 			if ((i + 1) < 20 && str[i + 1] == '#')
 				side++;
 			if ((i - 1) >= 0 && str[i - 1] == '#')
@@ -35,7 +38,7 @@ int						ft_shape_check(char *str)
 		}
 		i++;
 	}
-	return (side == 6 || side == 8);
+	return ((side == 6 || side == 8) && n == 4);
 }
 
 int						ft_character_check(char *str, const int ret)
